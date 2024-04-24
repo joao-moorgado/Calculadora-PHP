@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
+    
     <h1>Calculadora PHP</h1>
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
