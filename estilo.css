@@ -41,12 +41,16 @@ button {
 
 .resultado {
     text-align: center;
+    height: 100px;
+    width: 100px;
     margin-top: 20px;
+    background-color: black;
 }
 
 #visor {
     font-size: 24px;
     font-weight: bold;
+    background-color: black;
 }
 
 .historico {
