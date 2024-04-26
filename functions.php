@@ -53,4 +53,19 @@ function calculate($num1, $num2, $operation) {
         return pow($num1, $num2);
 }
 
+function fatorial($num) {
+
+    if ($num == 0) {
+        return 1;
+    } else {
+    
+    $result = 1;
+
+    for ($i = $num; $i >= 1; $i--) {
+        $result *= $i;
+    }
+
+    return $result;}
+}
+
 ?>
