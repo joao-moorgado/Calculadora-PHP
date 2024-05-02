@@ -1,11 +1,11 @@
 
     body {
-        font-family: sans-serif;
-        background-color: #c9d6ff;
-        display: flex;
+    font-family: sans-serif;
+    background-color: #c9d6ff;
+    display: flex;
     align-items: center;
-        justify-content: center;
-        flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
     height: 100vh;
         }
 
@@ -14,13 +14,25 @@
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
-        overflow: hidden;
-        width: 90vh;
+    overflow: hidden;
+    width: 90vh;
     padding: 40px;
-background: linear-gradient(to bottom, #1E4363, #4A90E2);
+    background: linear-gradient(to bottom, #1E4363, #4A90E2);
 
+    }
 
-        }
+    .font1{
+        color: white;
+        font-family: 'Roboto', sans-serif; 
+        font-weight: bold;
+        
+    }
+
+    .num1{
+        border-radius: 10px;
+        font-weight: bold;
+    }
+
         
         .campos {
     display: flex;
@@ -31,8 +43,8 @@ background: linear-gradient(to bottom, #1E4363, #4A90E2);
         }
         
         .operacao {
-    width: 60px;
-    padding: 5px;
+    width: 40px;
+    padding: 1px;
     margin: 5px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -52,24 +64,24 @@ background: linear-gradient(to bottom, #1E4363, #4A90E2);
         }
         
         button {
-            background-color: transparent;
-            color: #FFFFFF; 
-            font-size: 12px;
-            padding: 10px 20px;
-            border: 2px solid white; 
-            border-radius: 8px;
-            font-weight: bold;
-            font-family: 'Roboto', sans-serif; 
-            letter-spacing: 0.5px;
-            transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
-            cursor: pointer;
-            margin-right: 10px;
+    background-color: transparent;
+    color: #FFFFFF; 
+    font-size: 12px;
+    padding: 10px 20px;
+    border: 2px solid white; 
+    border-radius: 8px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; 
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+    margin-right: 10px;
         }
         
         button:hover {
-            background-color: #1E4363;
-            color: #FFFFFF;
-            border-color: #1E4363;
+    background-color: #1E4363;
+    color: #FFFFFF;
+    border-color: #1E4363;
         }
         
         
@@ -92,17 +104,17 @@ background: linear-gradient(to bottom, #1E4363, #4A90E2);
         #visor {
     font-size: 24px;
     font-weight: bold;
-        background-color: black;
-        color: white;
+    background-color: black;
+    color: white;
         }
         
         .historico {
-        margin-top: 20px;
+    margin-top: 20px;
         }
         
         #listaHistorico {
     list-style: none;
-        padding: 0;
+    padding: 0;
         }
         
         #listaHistorico li {
