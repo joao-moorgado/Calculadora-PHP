@@ -11,9 +11,9 @@
     <?php require_once 'functions.php'; ?>
     
     <form method="post" class="meio">
-    <h1>Calculadora PHP</h1>
-    <label for="num1">Valor 1</label> 
-    <input type="number" id="num1" name="num1" required> 
+    <h1 class="font1">Calculadora PHP</h1>
+    <label for="num1" class="font1">Valor 1</label> 
+    <input type="number" id="num1" name="num1" class="num1" required> 
     <label for="operation"></label>
     <select id="operation" name="operation" class="operacao" required>
     <option value="+">+</option>
@@ -24,8 +24,8 @@
     <option value="^">^</option>
     </select>
     
-    <label for="num2">Valor 2</label>
-    <input type="number" id="num2" name="num2" required>
+    <label for="num2" class="font1">Valor 2</label>
+    <input type="number" id="num2" name="num2" class="num1" required>
     
     <br>
     </div>
@@ -47,7 +47,7 @@
     <p><?php if ($result): echo $num1 . " " . $operation . " " . $num2 . " = " . $result; endif; ?></p>
     <!--The endif statement is the closing part of an if statement construct in PHP. It marks the end of the code block that should only be executed if a certain condition is true.-->
 
-        <h2>Histórico</h2>
+        <h2 class="font1">Histórico</h2>
         <?php if ($historic): ?>
     <table>
 
