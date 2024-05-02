@@ -53,10 +53,10 @@ background: linear-gradient(to bottom, #1E4363, #4A90E2);
         
         button {
             background-color: transparent;
-            color: #FFFFFF; /* Alterando a cor da letra para branco */
+            color: #FFFFFF; 
             font-size: 12px;
             padding: 10px 20px;
-            border: 2px solid #4F3A6B; /* Alterando a cor da borda para combinar com a linear azul escura */
+            border: 2px solid white; 
             border-radius: 8px;
             font-weight: bold;
             font-family: 'Roboto', sans-serif; 
