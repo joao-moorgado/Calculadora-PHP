@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="pt-br">
     <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <body>
 
     <?php require_once 'functions.php'; ?>
-    <div class="campos"></div>
+    
     <form method="post" class="meio">
     <h1>Calculadora PHP</h1>
     <label for="num1">Valor 1</label> 
@@ -23,10 +23,10 @@
     <option value="!">!</option>
     <option value="^">^</option>
     </select>
-    <div class="valor2-container">
+    
     <label for="num2">Valor 2</label>
     <input type="number" id="num2" name="num2" required>
-    </div>
+    
     <br>
     </div>
     <div class="acoes">
@@ -43,7 +43,7 @@
     </form>
 
     <br>
-
+    <div class="meio">
     <p><?php if ($result): echo $num1 . " " . $operation . " " . $num2 . " = " . $result; endif; ?></p>
     <!--The endif statement is the closing part of an if statement construct in PHP. It marks the end of the code block that should only be executed if a certain condition is true.-->
 
@@ -64,6 +64,6 @@
     <?php endforeach; ?>
     </table>
     <?php endif; ?>
-
+    </div>
     </body>
     </html>
