@@ -1,71 +1,56 @@
 <?php
 
-$historic = [];
-
-if (isset($_POST['calculate'])) {
-    // Receber valores do formulário
-    $num1 = $_POST['num1'];
-    $num2 = $_POST['num2'];
-    $operation = $_POST['operation'];
-
-    // Validar dados e realizar operação
-    if (validarDados($num1, $num2, $operation)) {
-        $result = calculate($num1, $num2, $operation);
-
-        $historic[] = array(
-            'num1' => $num1,
-            'num2' => $num2,
-            'operation' => $operation,
-            'result' => $result
-        );
-    } else {
-        $erro = 'Dados inválidos.';
-    }
-}
-
 function validarDados($num1, $num2, $operation) {
-    // Validar se os valores são números
     if (!is_numeric($num1) || !is_numeric($num2)) {
         return false;
     }
 
-    $operacoesValidas = array('+', '-', '*', '/', '!', '^');
-    return in_array($operation, $operacoesValidas);
+   
 }
 
-function calculate($num1, $num2, $operation) {
-    if ($operation == '+')
-        return $num1 + $num2;
-    if ($operation == '-')
-        return $num1 - $num2;
-    if ($operation == '*')
-        return $num1 * $num2;
-    if ($operation == '/') {
-        if ($num2 == 0) {
-            return 'Divisão por zero!';
-        } else {
-        return $num1 / $num2;
-        }
+function calcular($num1, $num2, $operation) {
+    switch ($operation) {
+        case '+':
+            return $num1 + $num2;
+        case '-':
+            return $num1 - $num2;
+        case '*':
+            return $num1 * $num2;
+        case '/':
+            if ($num2 == 0) {
+                return 'Divisão por zero!';
+            } else {
+                return $num1 / $num2;
+            }
+        case '!':
+            return fatorial($num1);
+        case '^':
+            return pow($num1, $num2);
+        default:
+            return 'Operação inválida';
     }
-    if ($operation == '!') 
-        return fatorial($num1);
-    if ($operation == '^')
-        return pow($num1, $num2);
 }
 
 function fatorial($num) {
-
-    if ($num == 0) {
-        return 1;
-    } else {
-    
-    $result = 1;
-
-    for ($i = $num; $i >= 1; $i--) {
-        $result *= $i;
+    $fatorial = 1;
+    for ($i = 1; $i <= $num; $i++) {
+        $fatorial *= $i;
     }
+    return $fatorial;
+}
 
-    return $result;}
+function addToMemory($value) {
+    if (!isset($_SESSION['memory'])) {
+        $_SESSION['memory'] = [];
+    }
+    $_SESSION['memory'][] = $value;
+}
+
+function getMemoryValues() {
+    if (isset($_SESSION['memory'])) {
+        return end($_SESSION['memory']);
+    }
+    return null;
 }
 
 ?>
