@@ -1,5 +1,5 @@
 
-    body {
+body {
     font-family: sans-serif;
     background-color: #c9d6ff;
     display: flex;
@@ -15,7 +15,7 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
     overflow: hidden;
-    width: 90vh;
+    width: 60vh;    
     padding: 40px;
     background: linear-gradient(to bottom, #1E4363, #4A90E2);
 
