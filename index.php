@@ -30,9 +30,10 @@ if (isset($_POST['save'])) {
 // Pegar valores salvos
 if (isset($_POST['getValues'])) {
     if (isset($_SESSION['saved_values'])) {
-        $num1 = $_SESSION['saved_values']['num1'];
-        $num2 = $_SESSION['saved_values']['num2'];
-        $operation = $_SESSION['saved_values']['operation'];
+        $saved_values = $_SESSION['saved_values'];
+        $num1 = $saved_values['num1'];
+        $num2 = $saved_values['num2'];
+        $operation = $saved_values['operation'];
     } else {
         $num1 = '';
         $num2 = '';
@@ -56,10 +57,6 @@ if (isset($_POST['calculate'])) {
             'result' => $result
         ];
 
-        // Limpar os valores temporários
-        unset($_SESSION['saved_values']);
-        
-        // Limpar os campos de entrada
         $num1 = '';
         $num2 = '';
     }
@@ -68,10 +65,10 @@ if (isset($_POST['calculate'])) {
 // Salvar ou exibir valores
 if (isset($_POST['memory'])) {
     if (isset($_SESSION['saved_values'])) {
-        // Exibir os valores salvos
-        $num1 = $_SESSION['saved_values']['num1'];
-        $num2 = $_SESSION['saved_values']['num2'];
-        $operation = $_SESSION['saved_values']['operation'];
+        $saved_values = $_SESSION['saved_values'];
+        $num1 = $saved_values['num1'];
+        $num2 = $saved_values['num2'];
+        $operation = $saved_values['operation'];
         unset($_SESSION['saved_values']); // Remover os valores salvos da sessão após exibir
     } else {
         // Salvar os valores na sessão
